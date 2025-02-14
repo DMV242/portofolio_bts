@@ -42,7 +42,7 @@ export default function ProjectsPage() {
       },
       {
         title: "Netflix Clone",
-        description: "Ce projet  est un clone de Netflix prenant en compte la gestion des épisodes,séries, saisons et des films diffusés via un serveur de streaming.",
+        description: "J'ai développé un clone de Netflix en mai 2024 en utilisant Django, JQuery, TailwindCSS, HTML et Node.js. Le projet inclut l'authentification des utilisateurs, un serveur de streaming pour la diffusion de contenus vidéo, la gestion des saisons, séries, épisodes et films, ainsi qu'une liste de favoris. Il propose également une fonctionnalité de recherche, une classification par genre et un panneau d'administration Django pour les opérations CRUD. L'objectif était de créer une expérience utilisateur similaire à celle de Netflix, avec une gestion efficace du contenu et une interface conviviale.",
         technologies: ["Express.js", "Node.js",  "HTML","CSS", "Jquery","Django"],
         date: "2024",
         github: "https://github.com/DMV242/Netflix_clone",
@@ -50,8 +50,17 @@ export default function ProjectsPage() {
         image: "/placeholder.svg?height=200&width=400",
       },
       {
+        title: "Serveur HTTP from scratch",
+        description: "j'ai développé un serveur HTTP from scratch en Python, capable de servir des fichiers, gérer des connexions simultanées, traiter les requêtes POST et GET, et compresser des données. Ce projet m'a permis d'approfondir mes compétences en Python et en développement backend, tout en renforçant ma compréhension des serveurs HTTP et ma capacité à construire des solutions robustes et performantes.",
+        technologies: ["python"],
+        date: "2024",
+        github: "https://github.com/DMV242/http-code-crafters",
+        demo: "https://github.com/DMV242/http-code-crafters",
+        image: "/placeholder.svg?height=200&width=400",
+      },
+      {
         title: "Chat App",
-        description: "Fonctionnalités clés :Envoie de message textuel , envoie d’image, authentification, salon de discussions.",
+        description: "J'ai développé une application de chat en temps réel avec Django, Django Channels et JavaScript, offrant une expérience fluide et réactive. Les utilisateurs peuvent envoyer des photos, se connecter via Google ou un système d'authentification classique, et bénéficier d'une gestion des droits sécurisée. Les photos sont stockées sur AWS S3, assurant un stockage sécurisé et évolutif. Ce projet m'a permis d'explorer les possibilités de la communication en temps réel avec Django.",
         technologies: ["Django","Django Channels",  "HTML","CSS", "Redis"],
         date: "2024",
         github: "https://github.com/DMV242/Django-chat",
