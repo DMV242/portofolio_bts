@@ -1,101 +1,178 @@
-import Image from "next/image";
+"use client"
+
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { ArrowRight, Code2, GraduationCap, Target } from "lucide-react"
+import Link from "next/link"
+import { motion } from "framer-motion"
+import { FadeIn, FadeInStagger, TextReveal, PageTransition, Magnetic } from "@/components/animations"
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const highlights = [
+    {
+      icon: <Code2 className="h-6 w-6" />,
+      title: "Développement",
+      description: "Passionné par le développement web et les nouvelles technologies",
+    },
+    {
+      icon: <GraduationCap className="h-6 w-6" />,
+      title: "Formation",
+      description: "BTS SIO option SLAM en cours",
+    },
+    {
+      icon: <Target className="h-6 w-6" />,
+      title: "Objectif",
+      description: "Devenir un développeur full-stack confirmé",
+    },
+  ]
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+  const skills = ["React", "Next.js", "TypeScript", "Node.js"]
+
+  return (
+    <PageTransition>
+      <div className="space-y-24">
+        {/* Hero Section */}
+        <section className="relative min-h-[80vh] flex items-center">
+          <div className="absolute inset-0 bg-gradient-to-b from-primary-50/50 to-transparent pointer-events-none" />
+          <div className="container mx-auto px-4 py-24 relative">
+            <div className="flex flex-col items-center text-center space-y-8 max-w-3xl mx-auto">
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 20,
+                }}
+                className="w-32 h-32 rounded-full overflow-hidden ring-4 ring-primary/20"
+              >
+                <img
+                  src="/me.jpg"
+                  alt="Photo de profil"
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+              <div className="space-y-4">
+                <TextReveal text="David MVOULA" className="text-4xl font-bold text-slate-900" />
+                <TextReveal text="Étudiant en BTS SIO SLAM" className="text-xl text-slate-600" />
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6 }}
+                  className="flex flex-wrap justify-center gap-2"
+                >
+                  {skills.map((skill, index) => (
+                    <motion.div
+                      key={skill}
+                      initial={{ opacity: 0, scale: 0.5 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{
+                        delay: 0.8 + index * 0.1,
+                        type: "spring",
+                        stiffness: 260,
+                        damping: 20,
+                      }}
+                    >
+                      <Badge variant="secondary">{skill}</Badge>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </div>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1 }}
+                className="text-lg text-slate-600 max-w-2xl"
+              >
+                Passionné par le développement web et les nouvelles technologies, je suis actuellement en formation pour
+                devenir développeur full-stack.
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.2 }}
+                className="flex gap-4"
+              >
+                <Magnetic>
+                  <Button asChild>
+                    <Link href="/a-propos">
+                      En savoir plus
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </Magnetic>
+                <Magnetic>
+                  <Button variant="outline" asChild>
+                    <Link href="/contact">Me contacter</Link>
+                  </Button>
+                </Magnetic>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Highlights Section */}
+        <section className="container mx-auto px-4">
+          <FadeInStagger>
+            <div className="grid md:grid-cols-3 gap-6">
+              {highlights.map((item, index) => (
+                <FadeIn key={index}>
+                  <Card className="bg-gradient-to-br from-primary-50 to-white">
+                    <CardContent className="p-6">
+                      <motion.div whileHover={{ scale: 1.05 }} className="flex flex-col items-center text-center gap-4">
+                        <div className="text-primary">{item.icon}</div>
+                        <h3 className="font-semibold">{item.title}</h3>
+                        <p className="text-slate-600">{item.description}</p>
+                      </motion.div>
+                    </CardContent>
+                  </Card>
+                </FadeIn>
+              ))}
+            </div>
+          </FadeInStagger>
+        </section>
+
+        {/* Call to Action */}
+        <section className="container mx-auto px-4 pb-12">
+          <FadeIn>
+            <Card className="bg-gradient-to-r from-primary-50 via-primary-100/50 to-primary-50 overflow-hidden">
+              <CardContent className="p-12">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 0.5,
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20,
+                  }}
+                  className="max-w-2xl mx-auto text-center space-y-6"
+                >
+                  <TextReveal text="Prêt à collaborer ?" className="text-2xl font-bold" />
+                  <p className="text-slate-600">
+                    Je suis toujours à la recherche de nouvelles opportunités pour développer mes compétences et
+                    contribuer à des projets innovants.
+                  </p>
+                  <div className="flex justify-center gap-4">
+                    <Magnetic>
+                      <Button asChild>
+                        <Link href="/contact">Me contacter</Link>
+                      </Button>
+                    </Magnetic>
+                    <Magnetic>
+                      <Button variant="outline" asChild>
+                        <Link href="/competences">Voir mes compétences</Link>
+                      </Button>
+                    </Magnetic>
+                  </div>
+                </motion.div>
+              </CardContent>
+            </Card>
+          </FadeIn>
+        </section>
+      </div>
+    </PageTransition>
+  )
 }
+
