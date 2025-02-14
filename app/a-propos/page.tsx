@@ -67,7 +67,7 @@ export default function About() {
                 <h2 className="text-2xl font-semibold">David Mvoula</h2>
                 <p className="text-slate-600">
                   Étudiant passionné en BTS SIO, je me spécialise dans le développement d'applications et la
-                  gestion de systèmes d'information. Mon objectif est de devenir un(e) professionnel(le) polyvalent(e)
+                  gestion de systèmes d'information. Mon objectif est de devenir un professionnel polyvalent
                   dans le domaine de l'informatique.
                 </p>
                 <div className="flex flex-wrap justify-center md:justify-start gap-4">
