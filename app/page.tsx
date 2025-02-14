@@ -27,7 +27,7 @@ export default function Home() {
     },
   ]
 
-  const skills = ["React", "Next.js", "TypeScript", "Node.js"]
+  const skills = ["React", "Next.js", "TypeScript", "Node.js","Python", "Django/Django REST Framework", ]
 
   return (
     <PageTransition>

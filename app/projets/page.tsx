@@ -20,35 +20,45 @@ export default function ProjectsPage() {
         demo: "#",
         image: "/placeholder.svg?height=200&width=400",
       },
-      {
-        title: "Site E-commerce",
-        description: "Création d'un site e-commerce avec système de panier et paiement",
-        technologies: ["Next.js", "Stripe", "PostgreSQL"],
-        date: "2023",
-        github: "#",
-        demo: "#",
-        image: "/placeholder.svg?height=200&width=400",
-      },
+      // {
+      //   title: "Site E-commerce",
+      //   description: "Création d'un site e-commerce avec système de panier et paiement",
+      //   technologies: ["Next.js", "Stripe", "PostgreSQL"],
+      //   date: "2023",
+      //   github: "#",
+      //   demo: "#",
+      //   image: "/placeholder.svg?height=200&width=400",
+      // },
     ],
     personnels: [
       {
-        title: "Portfolio Personnel",
-        description: "Conception et développement de mon portfolio professionnel",
-        technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
+        title: "Blog AI",
+        description: "BLOG AI Ce projet implémente un blog avec toutes ses fonctionnalités miminales tels que la création d’article , l’édition d’article et la suppression d’article, L’authentifaction via des token JWT, en y rajoutant la possibité de créer un article grâce à l’IA alimenté par une api de TextCortex.",
+        technologies: [ "Express.js", "Node.js", "React.js", "MongoDB", "JWT", "TextCortex API"],
         date: "2024",
-        github: "#",
-        demo: "#",
+        github: "https://github.com/DMV242/Blog",
+        demo: "https://github.com/DMV242/Blog",
         image: "/placeholder.svg?height=200&width=400",
       },
       {
-        title: "Blog Tech",
-        description: "Blog personnel sur les nouvelles technologies et le développement web",
-        technologies: ["Next.js", "MDX", "Tailwind CSS"],
-        date: "2023",
-        github: "#",
-        demo: "#",
+        title: "Netflix Clone",
+        description: "Ce projet  est un clone de Netflix prenant en compte la gestion des épisodes,séries, saisons et des films diffusés via un serveur de streaming.",
+        technologies: ["Express.js", "Node.js",  "HTML","CSS", "Jquery","Django"],
+        date: "2024",
+        github: "https://github.com/DMV242/Netflix_clone",
+        demo: "https://github.com/DMV242/Netflix_clone",
         image: "/placeholder.svg?height=200&width=400",
       },
+      {
+        title: "Chat App",
+        description: "Fonctionnalités clés :Envoie de message textuel , envoie d’image, authentification, salon de discussions.",
+        technologies: ["Django","Django Channels",  "HTML","CSS", "Redis"],
+        date: "2024",
+        github: "https://github.com/DMV242/Django-chat",
+        demo: "https://github.com/DMV242/Django-chat",
+        image: "/placeholder.svg?height=200&width=400",
+      }
+
     ],
     professionnels: [
       {
@@ -59,14 +69,14 @@ export default function ProjectsPage() {
         company: "Entreprise XYZ",
         image: "/placeholder.svg?height=200&width=400",
       },
-      {
-        title: "API REST",
-        description: "Stage - Création d'une API REST pour une application mobile",
-        technologies: ["Express", "MongoDB", "Docker"],
-        date: "2023",
-        company: "Entreprise ABC",
-        image: "/placeholder.svg?height=200&width=400",
-      },
+      // {
+      //   title: "API REST",
+      //   description: "Stage - Création d'une API REST pour une application mobile",
+      //   technologies: ["Express", "MongoDB", "Docker"],
+      //   date: "2023",
+      //   company: "Entreprise ABC",
+      //   image: "/placeholder.svg?height=200&width=400",
+      // },
     ],
   }
 
@@ -94,13 +104,13 @@ export default function ProjectsPage() {
                   {projects.scolaires.map((project, index) => (
                     <FadeIn key={index}>
                       <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                        <div className="aspect-video relative">
+                        {/* <div className="aspect-video relative">
                           <img
                             src={project.image || "/placeholder.svg"}
                             alt={project.title}
                             className="object-cover w-full h-full"
                           />
-                        </div>
+                        </div> */}
                         <CardContent className="p-6 space-y-4">
                           <div className="flex items-center justify-between">
                             <h3 className="text-xl font-semibold">{project.title}</h3>
@@ -145,13 +155,13 @@ export default function ProjectsPage() {
                   {projects.personnels.map((project, index) => (
                     <FadeIn key={index}>
                       <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                        <div className="aspect-video relative">
+                        {/* <div className="aspect-video relative">
                           <img
                             src={project.image || "/placeholder.svg"}
                             alt={project.title}
                             className="object-cover w-full h-full"
                           />
-                        </div>
+                        </div> */}
                         <CardContent className="p-6 space-y-4">
                           <div className="flex items-center justify-between">
                             <h3 className="text-xl font-semibold">{project.title}</h3>
@@ -196,13 +206,13 @@ export default function ProjectsPage() {
                   {projects.professionnels.map((project, index) => (
                     <FadeIn key={index}>
                       <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                        <div className="aspect-video relative">
+                        {/* <div className="aspect-video relative">
                           <img
                             src={project.image || "/placeholder.svg"}
                             alt={project.title}
                             className="object-cover w-full h-full"
                           />
-                        </div>
+                        </div> */}
                         <CardContent className="p-6 space-y-4">
                           <div className="flex items-center justify-between">
                             <h3 className="text-xl font-semibold">{project.title}</h3>
