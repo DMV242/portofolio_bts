@@ -2,8 +2,11 @@
 
 
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle } from "lucide-react"
+import {Button} from "@/components/ui/button"
+import { ArrowRight, CheckCircle } from "lucide-react"
 import { useState } from "react";
+import Link from "next/link";
+
 
 
 
@@ -52,10 +55,19 @@ export default function E4Page() {
         <div className="text-center space-y-4">
           <h1 className="text-3xl font-bold mt-6">Épreuve E4</h1>
           <p className="text-xl text-slate-600">Support et mise à disposition de services informatiques</p>
+          <Button asChild className="mx-auto items-center justify-center ">
+                    <a href="/epreuve_e4_David_mvoula.pdf" download={true}>
+                      Télecharger le tableau de synthèse
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                      </a>
+        </Button>
         </div>
 
 
-        <embed  src="/TP-Cybersecurite-MVOULA_David.pdf" width="100%" height="600px"/>
+
+
+
+        <embed  src="/epreuve_e4_David_mvoula.pdf" width="100%" height="600px"/>
 
 
           {competences.map((competence, index) => (
