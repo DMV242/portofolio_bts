@@ -52,9 +52,8 @@ export const projects = {
         github: "#",
         demo: "#",
         images: [
-          "/placeholder.svg?height=400&width=800",
-          "/placeholder.svg?height=400&width=800",
-          "/placeholder.svg?height=400&width=800",
+          "/gestion_stock.png",
+
         ],
         team: ["David MVOULA"],
       }
