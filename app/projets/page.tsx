@@ -7,87 +7,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ExternalLink, Github, Calendar } from "lucide-react"
 import Link from "next/link"
 import { FadeIn, FadeInStagger, PageTransition, TextReveal } from "@/components/animations"
+import { projects } from "@/app/data/projet"
 
 export default function ProjectsPage() {
-  const projects = {
-    scolaires: [
-      {
-        title: "Application de Gestion de Stock",
-        description: "Développement d'une application web pour la gestion de stock d'une entreprise fictive",
-        technologies: ["React", "Node.js", "MySQL"],
-        date: "2024",
-        github: "#",
-        demo: "#",
-        image: "/placeholder.svg?height=200&width=400",
-      },
-      // {
-      //   title: "Site E-commerce",
-      //   description: "Création d'un site e-commerce avec système de panier et paiement",
-      //   technologies: ["Next.js", "Stripe", "PostgreSQL"],
-      //   date: "2023",
-      //   github: "#",
-      //   demo: "#",
-      //   image: "/placeholder.svg?height=200&width=400",
-      // },
-    ],
-    personnels: [
-      {
-        title: "Blog AI",
-        description: "BLOG AI Ce projet implémente un blog avec toutes ses fonctionnalités miminales tels que la création d’article , l’édition d’article et la suppression d’article, L’authentifaction via des token JWT, en y rajoutant la possibité de créer un article grâce à l’IA alimenté par une api de TextCortex.",
-        technologies: [ "Express.js", "Node.js", "React.js", "MongoDB", "JWT", "TextCortex API"],
-        date: "2024",
-        github: "https://github.com/DMV242/Blog",
-        demo: "https://github.com/DMV242/Blog",
-        image: "/placeholder.svg?height=200&width=400",
-      },
-      {
-        title: "Netflix Clone",
-        description: "J'ai développé un clone de Netflix en mai 2024 en utilisant Django, JQuery, TailwindCSS, HTML et Node.js. Le projet inclut l'authentification des utilisateurs, un serveur de streaming pour la diffusion de contenus vidéo, la gestion des saisons, séries, épisodes et films, ainsi qu'une liste de favoris. Il propose également une fonctionnalité de recherche, une classification par genre et un panneau d'administration Django pour les opérations CRUD. L'objectif était de créer une expérience utilisateur similaire à celle de Netflix, avec une gestion efficace du contenu et une interface conviviale.",
-        technologies: ["Express.js", "Node.js",  "HTML","CSS", "Jquery","Django"],
-        date: "2024",
-        github: "https://github.com/DMV242/Netflix_clone",
-        demo: "https://github.com/DMV242/Netflix_clone",
-        image: "/placeholder.svg?height=200&width=400",
-      },
-      {
-        title: "Serveur HTTP from scratch",
-        description: "j'ai développé un serveur HTTP from scratch en Python, capable de servir des fichiers, gérer des connexions simultanées, traiter les requêtes POST et GET, et compresser des données. Ce projet m'a permis d'approfondir mes compétences en Python et en développement backend, tout en renforçant ma compréhension des serveurs HTTP et ma capacité à construire des solutions robustes et performantes.",
-        technologies: ["python"],
-        date: "2024",
-        github: "https://github.com/DMV242/http-code-crafters",
-        demo: "https://github.com/DMV242/http-code-crafters",
-        image: "/placeholder.svg?height=200&width=400",
-      },
-      {
-        title: "Chat App",
-        description: "J'ai développé une application de chat en temps réel avec Django, Django Channels et JavaScript, offrant une expérience fluide et réactive. Les utilisateurs peuvent envoyer des photos, se connecter via Google ou un système d'authentification classique, et bénéficier d'une gestion des droits sécurisée. Les photos sont stockées sur AWS S3, assurant un stockage sécurisé et évolutif. Ce projet m'a permis d'explorer les possibilités de la communication en temps réel avec Django.",
-        technologies: ["Django","Django Channels",  "HTML","CSS", "Redis"],
-        date: "2024",
-        github: "https://github.com/DMV242/Django-chat",
-        demo: "https://github.com/DMV242/Django-chat",
-        image: "/placeholder.svg?height=200&width=400",
-      }
 
-    ],
-    professionnels: [
-      {
-        title: "Dashboard Analytics",
-        description: "Stage - Développement d'un dashboard pour visualiser les données clients",
-        technologies: ["React", "D3.js", "Node.js"],
-        date: "2024",
-        company: "Entreprise XYZ",
-        image: "/placeholder.svg?height=200&width=400",
-      },
-      // {
-      //   title: "API REST",
-      //   description: "Stage - Création d'une API REST pour une application mobile",
-      //   technologies: ["Express", "MongoDB", "Docker"],
-      //   date: "2023",
-      //   company: "Entreprise ABC",
-      //   image: "/placeholder.svg?height=200&width=400",
-      // },
-    ],
-  }
 
   return (
     <PageTransition>
@@ -113,13 +36,6 @@ export default function ProjectsPage() {
                   {projects.scolaires.map((project, index) => (
                     <FadeIn key={index}>
                       <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                        {/* <div className="aspect-video relative">
-                          <img
-                            src={project.image || "/placeholder.svg"}
-                            alt={project.title}
-                            className="object-cover w-full h-full"
-                          />
-                        </div> */}
                         <CardContent className="p-6 space-y-4">
                           <div className="flex items-center justify-between">
                             <h3 className="text-xl font-semibold">{project.title}</h3>
@@ -144,9 +60,9 @@ export default function ProjectsPage() {
                               </Link>
                             </Button>
                             <Button size="sm" asChild>
-                              <Link href={project.demo}>
+                              <Link href={`/projets/${project.id}`}>
                                 <ExternalLink className="h-4 w-4 mr-2" />
-                                Démo
+                                Voir détails
                               </Link>
                             </Button>
                           </div>
@@ -164,13 +80,6 @@ export default function ProjectsPage() {
                   {projects.personnels.map((project, index) => (
                     <FadeIn key={index}>
                       <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                        {/* <div className="aspect-video relative">
-                          <img
-                            src={project.image || "/placeholder.svg"}
-                            alt={project.title}
-                            className="object-cover w-full h-full"
-                          />
-                        </div> */}
                         <CardContent className="p-6 space-y-4">
                           <div className="flex items-center justify-between">
                             <h3 className="text-xl font-semibold">{project.title}</h3>
@@ -195,9 +104,9 @@ export default function ProjectsPage() {
                               </Link>
                             </Button>
                             <Button size="sm" asChild>
-                              <Link href={project.demo}>
+                              <Link href={`/projets/${project.id}`}>
                                 <ExternalLink className="h-4 w-4 mr-2" />
-                                Démo
+                                Voir détails
                               </Link>
                             </Button>
                           </div>
@@ -215,13 +124,6 @@ export default function ProjectsPage() {
                   {projects.professionnels.map((project, index) => (
                     <FadeIn key={index}>
                       <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                        {/* <div className="aspect-video relative">
-                          <img
-                            src={project.image || "/placeholder.svg"}
-                            alt={project.title}
-                            className="object-cover w-full h-full"
-                          />
-                        </div> */}
                         <CardContent className="p-6 space-y-4">
                           <div className="flex items-center justify-between">
                             <h3 className="text-xl font-semibold">{project.title}</h3>
@@ -238,7 +140,15 @@ export default function ProjectsPage() {
                               </Badge>
                             ))}
                           </div>
-                          <div className="text-sm text-slate-600">{project.company}</div>
+                          <div className="flex items-center justify-between mt-4">
+                            <div className="text-sm text-slate-600">{project.company}</div>
+                            <Button size="sm" asChild>
+                              <Link href={`/projets/${project.id}`}>
+                                <ExternalLink className="h-4 w-4 mr-2" />
+                                Voir détails
+                              </Link>
+                            </Button>
+                          </div>
                         </CardContent>
                       </Card>
                     </FadeIn>

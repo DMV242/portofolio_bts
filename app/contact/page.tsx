@@ -1,3 +1,4 @@
+import React from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -58,7 +59,7 @@ export default function Contact() {
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-primary" />
-                  <span>93150 Blanc-Mesnil, France</span>
+                  <span>île de France</span>
                 </div>
               </div>
             </CardContent>

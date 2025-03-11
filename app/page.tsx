@@ -7,6 +7,7 @@ import { ArrowRight, Code2, GraduationCap, Target } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { FadeIn, FadeInStagger, TextReveal, PageTransition, Magnetic } from "@/components/animations"
+import React from "react"
 
 export default function Home() {
   const highlights = [
