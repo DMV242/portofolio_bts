@@ -143,7 +143,7 @@ export default function ProjectsPage() {
                           <div className="flex items-center justify-between mt-4">
                             <div className="text-sm text-slate-600">{project.company}</div>
                             <Button size="sm" asChild>
-                              <Link href={`/projets/${project.id}`}>
+                              <Link href={`${project.id == "deplano" ? "https://deplano.fr/": "https://www.interieur.gouv.fr/"}`}>
                                 <ExternalLink className="h-4 w-4 mr-2" />
                                 Voir détails
                               </Link>
