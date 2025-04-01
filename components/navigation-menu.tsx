@@ -37,9 +37,9 @@ export function NavigationMenu() {
       description: "BTS Services Informatiques aux Organisations",
     },
     {
-      href: "/bts-sio/e4",
-      label: "Épreuve E4",
-      description: "Support et mise à disposition de services informatiques",
+      href: "/bts-sio/e5",
+      label: "Épreuve E5",
+      description: "Tableau de synthèse",
     },
     {
       href: "/bts-sio/veille",
