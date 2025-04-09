@@ -5,32 +5,44 @@ import { Brain, Newspaper, GitBranch, Bookmark, ExternalLink, Calendar, Tag } fr
 import Link from "next/link"
 
 export default function VeillePage() {
-  const articles = [
-    {
-      title: "L'impact de ChatGPT sur le développement logiciel",
-      date: "15 janvier 2024",
-      source: "Medium",
-      tags: ["IA", "Développement", "ChatGPT"],
-      summary:
-        "Analyse de l'utilisation de ChatGPT dans le développement logiciel et son impact sur la productivité des développeurs.",
-      link: "#",
-    },
-    {
-      title: "Les avancées de l'IA générative en 2024",
-      date: "28 janvier 2024",
-      source: "TechCrunch",
-      tags: ["IA Générative", "Innovation"],
-      summary: "Découverte des dernières innovations en matière d'IA générative et leurs applications pratiques.",
-      link: "#",
-    },
-    {
-      title: "Intelligence Artificielle et Cybersécurité",
-      date: "5 février 2024",
-      source: "Security Weekly",
-      tags: ["IA", "Cybersécurité"],
-      summary: "Comment l'IA révolutionne la détection des menaces et la protection des systèmes d'information.",
-      link: "#",
-    },
+  const articles =
+    [
+      {
+        "title": "L'Impact de l'Intelligence Artificielle en 2024",
+        "date": "14 janvier 2025",
+        "source": "RCB Informatique",
+        "tags": ["IA", "Développement logiciel", "Productivité"],
+        "summary": "Exploration de l'impact de l'IA sur le développement logiciel, incluant l'automatisation du codage, les tests automatisés, et l'optimisation du code.",
+        "link": "https://www.rcb-informatique.fr/limpact-de-lintelligence-artificielle-sur-le-developpement-logiciel-en-2024/"
+      },
+      {
+        "title": "ChatGPT: Top 10 Use Cases In Software Development",
+        "date": "15 mai 2023",
+        "source": "ValueCoders",
+        "tags": ["IA", "Développement logiciel", "ChatGPT"],
+        "summary":
+          "Exploration des cas d'utilisation de ChatGPT dans le développement logiciel, notamment la génération de code, la gestion de projet et le contrôle de version.",
+        "link": "https://www.valuecoders.com/blog/blockchain-ml/chatgpt-use-cases-in-software-development/"
+      },
+      {
+        "title": "12 AR Trends of 2023: New Milestones in Immersive Technology",
+        "date": "12 août 2023",
+        "source": "ISM Guide",
+        "tags": ["AR", "Métavers", "Technologie immersive"],
+        "summary":
+          "Un aperçu des tendances clés en réalité augmentée, notamment l'intégration avec le métavers, les lunettes AR, et les applications dans divers secteurs comme la santé et le commerce.",
+        "link": "https://ismguide.com/12-ar-trends-of-2023/"
+      },
+      {
+        "title": "XR Trends 2024: Innovations and Insights",
+        "date": "18 mars 2025",
+        "source": "YORD Studio",
+        "tags": ["AR", "XR", "AI", "Technologie immersive"],
+        "summary":
+          "Analyse des avancées technologiques XR en 2024, incluant l'IA générative, la 5G, et des dispositifs comme Apple Vision Pro et Meta Quest 3.",
+        "link": "https://yordstudio.com/xr-vr-ar-and-ai-report-of-2024-innovations-and-opportunities-for-businesses/"
+      }
+
   ]
 
   const tools = [
@@ -53,16 +65,10 @@ export default function VeillePage() {
 
   const aiProjects = [
     {
-      title: "Assistant Virtuel en Python",
-      description: "Développement d'un assistant virtuel utilisant l'API OpenAI",
-      technologies: ["Python", "OpenAI API", "Speech Recognition"],
-      status: "En cours",
-    },
-    {
-      title: "Système de Recommandation",
-      description: "Implémentation d'un système de recommandation basé sur l'IA",
-      technologies: ["Python", "TensorFlow", "scikit-learn"],
-      status: "Terminé",
+      title: "Deplano AI",
+      description: "Développement d'un assistant virtuel pour la recherche d'un avocat",
+      technologies: ["Python", "OpenAI API", "NLP"],
+      status: "En Beta",
     },
   ]
 
@@ -73,7 +79,7 @@ export default function VeillePage() {
           <h1 className="text-3xl font-bold mt-8">Veille Technologique</h1>
           <p className="text-slate-600 max-w-2xl mx-auto">
             Suivi régulier des innovations en Intelligence Artificielle et leurs applications dans le développement
-            informatique.
+            informatique et aussi dans le domaine de la réalité virtuelle et augmentée.
           </p>
         </div>
 

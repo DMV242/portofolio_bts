@@ -1,10 +1,10 @@
 "use client"
-
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import React from "react"
+import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card"
+import { Button } from "../../components/ui/button"
 import { ArrowRight, Code2, Server, BookOpen, Network, Shield, Database } from "lucide-react"
 import Link from "next/link"
-import { FadeIn, FadeInStagger, PageTransition, TextReveal } from "@/components/animations"
+import { FadeIn, FadeInStagger, PageTransition, TextReveal } from "../../components/animations"
 
 export default function BTSSIOPage() {
   const options = [
