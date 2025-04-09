@@ -1,9 +1,8 @@
 "use client"
 
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ExternalLink, Github, Calendar } from "lucide-react"
 import Link from "next/link"
 import { FadeIn, FadeInStagger, PageTransition, TextReveal } from "@/components/animations"
@@ -23,14 +22,12 @@ export default function ProjectsPage() {
             </p>
           </div>
 
-          <Tabs defaultValue="scolaires" className="space-y-8">
-            <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="scolaires">Projets Scolaires</TabsTrigger>
-              <TabsTrigger value="personnels">Projets Personnels</TabsTrigger>
-              <TabsTrigger value="professionnels">Projets Professionnels</TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="scolaires">
+          {/* Section Projets Scolaires */}
+          <Card className="overflow-hidden mb-8">
+            <CardHeader className="bg-primary/5">
+              <CardTitle>Projets Scolaires</CardTitle>
+            </CardHeader>
+            <CardContent className="p-6">
               <FadeInStagger>
                 <div className="grid gap-6">
                   {projects.scolaires.map((project, index) => (
@@ -72,9 +69,15 @@ export default function ProjectsPage() {
                   ))}
                 </div>
               </FadeInStagger>
-            </TabsContent>
+            </CardContent>
+          </Card>
 
-            <TabsContent value="personnels">
+          {/* Section Projets Personnels */}
+          <Card className="overflow-hidden mb-8">
+            <CardHeader className="bg-primary/5">
+              <CardTitle>Projets Personnels</CardTitle>
+            </CardHeader>
+            <CardContent className="p-6">
               <FadeInStagger>
                 <div className="grid gap-6">
                   {projects.personnels.map((project, index) => (
@@ -116,9 +119,15 @@ export default function ProjectsPage() {
                   ))}
                 </div>
               </FadeInStagger>
-            </TabsContent>
+            </CardContent>
+          </Card>
 
-            <TabsContent value="professionnels">
+          {/* Section Projets Professionnels */}
+          <Card className="overflow-hidden">
+            <CardHeader className="bg-primary/5">
+              <CardTitle>Projets Professionnels</CardTitle>
+            </CardHeader>
+            <CardContent className="p-6">
               <FadeInStagger>
                 <div className="grid gap-6">
                   {projects.professionnels.map((project, index) => (
@@ -155,8 +164,8 @@ export default function ProjectsPage() {
                   ))}
                 </div>
               </FadeInStagger>
-            </TabsContent>
-          </Tabs>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </PageTransition>

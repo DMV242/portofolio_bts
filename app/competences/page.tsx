@@ -13,6 +13,7 @@ import {
   Users,
   Brain,
   PenToolIcon as Tool,
+  CheckCircle,
 } from "lucide-react"
 
 export default function Skills() {
@@ -130,17 +131,14 @@ export default function Skills() {
                       <p className="text-sm text-slate-600">{category.description}</p>
                     </div>
                   </div>
-                  <div className="space-y-4">
+                  <ul className="space-y-2 text-slate-600">
                     {category.skills.map((skill, idx) => (
-                      <div key={idx} className="space-y-2">
-                        <div className="flex justify-between text-sm">
-                          <span>{skill.name}</span>
-                          <span>{skill.level}%</span>
-                        </div>
-                        <Progress value={skill.level} className="h-2" />
-                      </div>
+                      <li key={idx} className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5" />
+                        <span>{skill.name}</span>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </CardContent>
               </Card>
             ))}
@@ -160,7 +158,10 @@ export default function Skills() {
                   </div>
                   <ul className="space-y-2 text-slate-600">
                     {skill.items.map((item, idx) => (
-                      <li key={idx}>• {item}</li>
+                      <li key={idx} className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5" />
+                        <span>{item}</span>
+                      </li>
                     ))}
                   </ul>
                 </CardContent>

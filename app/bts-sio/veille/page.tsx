@@ -1,7 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Brain, Newspaper, GitBranch, Bookmark, ExternalLink, Calendar, Tag } from "lucide-react"
 import Link from "next/link"
 
@@ -78,14 +77,12 @@ export default function VeillePage() {
           </p>
         </div>
 
-        <Tabs defaultValue="articles" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-3">
-            <TabsTrigger value="articles">Articles et Ressources</TabsTrigger>
-            <TabsTrigger value="tools">Outils de Veille</TabsTrigger>
-            <TabsTrigger value="projects">Projets IA</TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="articles" className="space-y-6">
+        {/* Section Articles et Ressources */}
+        <Card className="overflow-hidden">
+          <CardHeader className="bg-primary/5">
+            <CardTitle>Articles et Ressources</CardTitle>
+          </CardHeader>
+          <CardContent className="p-6 space-y-6">
             {articles.map((article, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
@@ -121,23 +118,37 @@ export default function VeillePage() {
                 </CardContent>
               </Card>
             ))}
-          </TabsContent>
+          </CardContent>
+        </Card>
 
-          <TabsContent value="tools" className="grid md:grid-cols-3 gap-6">
-            {tools.map((tool, index) => (
-              <Card key={index} className="bg-gradient-to-br from-primary-50 to-white">
-                <CardContent className="p-6">
-                  <div className="flex flex-col items-center text-center gap-4">
-                    <div className="text-primary">{tool.icon}</div>
-                    <h3 className="font-semibold">{tool.name}</h3>
-                    <p className="text-sm text-slate-600">{tool.description}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </TabsContent>
+        {/* Section Outils de Veille */}
+        <Card className="overflow-hidden">
+          <CardHeader className="bg-primary/5">
+            <CardTitle>Outils de Veille</CardTitle>
+          </CardHeader>
+          <CardContent className="p-6">
+            <div className="grid md:grid-cols-3 gap-6">
+              {tools.map((tool, index) => (
+                <Card key={index} className="bg-gradient-to-br from-primary-50 to-white">
+                  <CardContent className="p-6">
+                    <div className="flex flex-col items-center text-center gap-4">
+                      <div className="text-primary">{tool.icon}</div>
+                      <h3 className="font-semibold">{tool.name}</h3>
+                      <p className="text-sm text-slate-600">{tool.description}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
 
-          <TabsContent value="projects" className="space-y-6">
+        {/* Section Projets IA */}
+        <Card className="overflow-hidden">
+          <CardHeader className="bg-primary/5">
+            <CardTitle>Projets IA</CardTitle>
+          </CardHeader>
+          <CardContent className="p-6 space-y-6">
             {aiProjects.map((project, index) => (
               <Card key={index}>
                 <CardHeader>
@@ -162,8 +173,8 @@ export default function VeillePage() {
                 </CardContent>
               </Card>
             ))}
-          </TabsContent>
-        </Tabs>
+          </CardContent>
+        </Card>
 
         {/* Méthodologie de veille */}
         <Card>
