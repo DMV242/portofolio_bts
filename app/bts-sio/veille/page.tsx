@@ -203,8 +203,6 @@ export default function VeillePage() {
                 <ul className="space-y-1 text-slate-600">
                   <li>• Veille quotidienne sur l'actualité IA</li>
                   <li>• Revue hebdomadaire des innovations</li>
-                  <li>• Synthèse mensuelle</li>
-                  <li>• Partage via un blog personnel</li>
                 </ul>
               </div>
             </div>
