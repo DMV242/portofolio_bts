@@ -55,7 +55,7 @@ export default function E5Page() {
           <h1 className="text-3xl font-bold mt-6">Épreuve E5</h1>
           <p className="text-xl text-slate-600">Tableau de synthèse</p>
           <Button asChild className="mx-auto items-center justify-center ">
-                    <a href="/epreuve_e4_David_mvoula.pdf" download={true}>
+                    <a href="/epreuve_e5_david_mvoula.pdf" download={true}>
                       Télecharger le tableau de synthèse
                       <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
