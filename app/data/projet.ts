@@ -1,6 +1,68 @@
 export const projects = {
     scolaires: [
       {
+        id: "gestion-projets-mobile-mairie",
+        title: "Application Mobile de Gestion de Projets - Mairie de Paris",
+        description: "Développement d'une application mobile pour la gestion des projets de la Mairie de Paris",
+        longDescription:
+          "Cette application mobile a été développée avec React Native pour permettre à la Mairie de Paris de gérer ses projets via une interface mobile. Elle inclut des fonctionnalités telles que l'authentification sécurisée, la consultation des projets et de leurs tâches associées, ainsi qu'un profil utilisateur. L'application est optimisée pour Android et se connecte à une API Django REST Framework pour la gestion des données.",
+        technologies: ["React Native", "Expo", "React Navigation", "React Native Paper", "Axios", "AsyncStorage"],
+        features: [
+          "Authentification sécurisée",
+          "Consultation des projets",
+          "Visualisation des détails d'un projet",
+          "Affichage des tâches associées à un projet",
+          "Gestion du profil utilisateur",
+        ],
+        challenges: [
+          "Intégration avec l'API Django REST Framework",
+          "Optimisation de l'application pour Android",
+          "Création d'une interface utilisateur mobile fluide et intuitive",
+          "Gestion des sessions et des données persistantes avec AsyncStorage",
+        ],
+        date: "Mai 2025",
+        duration: "2 mois",
+        category: "scolaire",
+        github: "https://github.com/DMV242/mairie_paris_lourd", // Remplace par l'URL de ton repo GitHub
+        demo: "https://github.com/DMV242/mairie_paris_lourd",   // Remplace par le lien de démo si disponible
+        images: [
+          "/gestion_projets_mobile_mairie.jpg", // Remplace ou ajoute d'autres screenshots si disponibles
+        ],
+        team: ["David MVOULA"],
+      }
+,
+      {
+        id: "gestion-projets-mairie",
+        title: "Application de Gestion de Projet - Mairie de Paris",
+        description: "Développement d'une application web de gestion de projets pour la Mairie de Paris",
+        longDescription:
+          "Cette application a été développée pour la gestion de projets de la Mairie de Paris. Elle permet de gérer les utilisateurs, les projets, les tâches, les équipes ainsi que les commentaires associés. Un tableau de bord centralise les informations clés. Ce projet est conçu avec Django en backend, MySQL pour la base de données, et une interface légère en HTML/CSS avec TailwindCSS.",
+        technologies: ["Django", "MySQL", "HTML", "CSS", "TailwindCSS", "JavaScript"],
+        features: [
+          "Gestion des utilisateurs (création, modification, suppression)",
+          "Gestion des projets avec suivi des statuts",
+          "Gestion des tâches (création, modification, attribution, suivi)",
+          "Gestion des équipes (création, attribution des membres)",
+          "Commentaires sur les projets et les tâches",
+          "Tableau de bord avec vue synthétique des informations",
+        ],
+        challenges: [
+          "Création d’un modèle de données relationnel robuste",
+          "Mise en place d’un système d’authentification basé sur les sessions",
+          "Construction d’une interface claire et fonctionnelle avec HTML et Tailwind",
+          "Configuration et sécurisation d’une base MySQL",
+        ],
+        date: "Avril 2025",
+        duration: "2 mois",
+        category: "scolaire",
+        github: "https://github.com/DMV242/mairie_paris_leger",
+        demo: "https://github.com/DMV242/mairie_paris_leger",
+        images: [
+          "/gestion_projets_mairie_leger.png", // Remplace ou ajoute d'autres screenshots si disponibles
+        ],
+        team: ["David MVOULA"],
+      },
+      {
         id: "projet-meteo",
         title: "Projet Météo",
         description: "Développement d'une application web pour la gestion de stock d'une entreprise fictiv",
@@ -18,7 +80,7 @@ export const projects = {
           "Optimisation des performances",
           "Gestion des erreurs de l'API",
         ],
-        date: "2024",
+        date: "2025",
         duration: "1 mois",
         category: "scolaire",
         github: "https://github.com/DMV242/Projet-Meteo",
