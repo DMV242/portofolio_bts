@@ -71,9 +71,11 @@ export default function About() {
                   dans le domaine de l'informatique.
                 </p>
                 <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                  <Button variant="outline">
+                  <Button variant="outline" >
                     <User className="mr-2 h-4 w-4" />
+                    <Link href={"https://drive.google.com/file/d/13a6HyH2mmmOXDYpHms5RkImaVgnRLb9g/view"}>
                     Télécharger CV
+                    </Link>
                   </Button>
                   <Button asChild>
                     <Link href="/contact">
